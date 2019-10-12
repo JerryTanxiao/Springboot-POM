@@ -1,5 +1,6 @@
 package tt.service.Impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import tt.pojo.User;
 import tt.dao.UserDao;
 import tt.service.UserService;
@@ -16,5 +17,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserService {
-
+    @Autowired
+    private UserDao userDao;
+    @Override
+    public User getUserById(Integer id) {
+        return userDao.getUserByUserId(id);
+    }
 }

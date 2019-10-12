@@ -5,5 +5,5 @@ spring:
     url: jdbc:mysql://47.106.227.129:3306/db?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8
     driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis-plus:
-  mapper-locations: classpath*:/mapper/**.xml
+  mapper-locations: classpath*:mapper/**.xml
 

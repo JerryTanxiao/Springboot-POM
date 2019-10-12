@@ -7,12 +7,13 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
+import org.springframework.scheduling.annotation.EnableAsync;
 
-//@SpringBootConfiguration
-//@EnableAutoConfiguration
+@SpringBootConfiguration
+@EnableAutoConfiguration
 @EnableSwagger2Doc
-//@ComponentScan(basePackages = {"tt.dao","tt.service","tt.controller"})
-@SpringBootApplication
+@ComponentScan(basePackages = {"tt.dao","tt.service","tt.controller"})
+//@SpringBootApplication
 public class SpringbootControllerApplication {
 
     public static void main(String[] args) {

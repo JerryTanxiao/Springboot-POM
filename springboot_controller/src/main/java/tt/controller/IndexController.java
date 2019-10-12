@@ -27,7 +27,8 @@ public class IndexController {
     @RequestMapping("/")
     public String index(Model model){
         model.addAttribute("title","Springboot渲染页面");
-        model.addAttribute("user",userService.getById(1));
+//        model.addAttribute("user",userService.getById(1));
+        model.addAttribute("user",userService.getUserById(2));
         return "index";
     }
 }

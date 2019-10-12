@@ -1,6 +1,8 @@
 package tt.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 import tt.pojo.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -14,5 +16,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 @Mapper
 public interface UserDao extends BaseMapper<User> {
-
+    User getUserByUserId(@Param("id") Integer id);
 }
