@@ -26,11 +26,12 @@ import java.util.List;
 @Component
 @MapperScan(basePackages = "tt.dao")
 @EnableTransactionManagement
-public class MybatisConfig {
+public class MybatisPlusConfiguration {
     /**
      * 分页插件
      * @return
      */
+    @Profile({"dev","qa"})// 设置 dev test 环境开启
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
@@ -38,6 +39,7 @@ public class MybatisConfig {
         // paginationInterceptor.setOverflow(false);
         // 设置最大单页限制数量，默认 500 条，-1 不受限制
         // paginationInterceptor.setLimit(500);
+        paginationInterceptor.setDialectType("mysql");
         List<ISqlParser> sqlParserList = new ArrayList<>();
         // 攻击 SQL 阻断解析器、加入解析链
         sqlParserList.add(new BlockAttackSqlParser() {
@@ -54,4 +56,5 @@ public class MybatisConfig {
         paginationInterceptor.setSqlParserList(sqlParserList);
         return paginationInterceptor;
     }
+
 }

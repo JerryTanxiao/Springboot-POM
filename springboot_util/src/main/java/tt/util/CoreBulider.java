@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
+import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 import java.util.ArrayList;
@@ -55,6 +56,7 @@ public class CoreBulider {
         gc.setBaseResultMap(true);
         gc.setBaseColumnList(false);
         gc.setIdType(IdType.AUTO);
+        gc.setDateType(DateType.ONLY_DATE);//时间策略
         //自定义文件名,注意%s会自动填充表实体类属性
         gc.setControllerName("%sController");
         gc.setServiceName("%sService");

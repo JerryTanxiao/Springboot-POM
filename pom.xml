@@ -59,6 +59,7 @@
             <artifactId>swagger-spring-boot-starter</artifactId>
             <version>1.9.0.RELEASE</version>
         </dependency>
+
     </dependencies>
     <!--指定使用maven打包-->
     <build>
