@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import tt.service.Impl.UserServiceImpl;
 
@@ -18,13 +19,13 @@ import tt.service.Impl.UserServiceImpl;
  * <p>
  * 2019年10月12  JerryTan 初始化页面 create file
  */
-@Api(tags = "用户管理")
+@Api(tags = "登录管理")
 @Controller
 public class IndexController {
     @Autowired
     private UserServiceImpl userService;
     @ApiOperation(value = "跳转页面")
-    @RequestMapping("/")
+    @GetMapping("/")
     public String index(Model model){
         model.addAttribute("title","Springboot渲染页面");
 //        model.addAttribute("user",userService.getById(1));
