@@ -57,9 +57,9 @@
     </appenders>
     <!--root 默认加载-->
     <loggers>
-        <root level="DEBUG">
+        <root level="INFO">
             <appender-ref ref="Console"/>
-            <!--<appender-ref ref="allLog"/>-->
+           <!-- <appender-ref ref="allLog"/>-->
             <!--<appender-ref ref="debugLog"/>-->
             <!--<appender-ref ref="errorLog"/>-->
             <!--<appender-ref ref="RollingFile"/>-->

@@ -39,8 +39,8 @@ public class MongoDbTest {
     private MongoDbFactory mongoDbFactory;
     @Test
     public void fileupload() throws Exception {
-        FileInputStream fis = new FileInputStream("F:\\20170818171013_BNSZR.jpeg");
-        ObjectId jpeg = gridFsTemplate.store(fis, "20170818171013_BNSZR.jpeg", "jpeg");
+        FileInputStream fis = new FileInputStream("D:\\sys_office.sql");
+        ObjectId jpeg = gridFsTemplate.store(fis, "sys_office.sql", "sql");
         System.out.println("保存成功"+jpeg);
     }
 
